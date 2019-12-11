@@ -5,9 +5,12 @@ My evolving idea of a perfect base React project
 
 ## Development Progress
 - [x] Initialise the repo
-- [ ] Install React and other key tools
-- [ ] Lay out base solution architecture
-- [ ] Integrate Emotion.js
-- [ ] Global Themeing
-- [ ] Core Components & Storybook
-- [ ] Figure out what else to use
+- [x] Install React and other key tools
+- [x] Lay out base solution architecture
+- [x] Integrate Emotion.js
+- [ ] Global Theme base
+- [ ] Global components base
+- [ ] Dynamic pods
+- [ ] Linting
+- [ ] Storybook
+- [ ] Keep updated
