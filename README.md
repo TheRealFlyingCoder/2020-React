@@ -9,6 +9,7 @@ My evolving idea of a perfect base React project
 - [x] Lay out base solution architecture
 - [x] Integrate Emotion.js
 - [x] EsLint / Prettier
+- [x] Polyfills
 - [x] Meta Provider for routes
 - [ ] Storybook
 - [ ] Global Theme base
