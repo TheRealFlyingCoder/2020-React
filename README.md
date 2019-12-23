@@ -8,9 +8,10 @@ My evolving idea of a perfect base React project
 - [x] Install React and other key tools
 - [x] Lay out base solution architecture
 - [x] Integrate Emotion.js
+- [x] EsLint / Prettier
+- [x] Meta Provider for routes
+- [ ] Storybook
 - [ ] Global Theme base
 - [ ] Global components base
 - [ ] Dynamic pods
-- [ ] Linting
-- [ ] Storybook
 - [ ] Keep updated

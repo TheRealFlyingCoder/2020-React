@@ -1,4 +1,7 @@
 import React from "react";
+import meta from './Home.meta';
+
+export const metaConfig = meta;
 
 export default () => {
   return (

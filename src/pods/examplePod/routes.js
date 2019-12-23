@@ -1,10 +1,11 @@
-import Home from './pages/Home';
+import Home, { metaConfig } from './pages/Home';
 
 export default [
 	{
 		path: "/",
 		exact: true,
 		title: "Home",
-		component: Home,
+		Component: Home,
+		metaConfig: metaConfig
 	},
 ];;

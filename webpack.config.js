@@ -1,5 +1,4 @@
 const path = require('path');
-
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -15,7 +14,7 @@ module.exports = {
       //Generic Alias for the source
       '~': path.resolve(__dirname, './src'),
       //The Theme provider which will likely be used on every .styles.js file
-      'Theme': path.resolve(__dirname, './src/styles/style.ts')
+      'Theme': path.resolve(__dirname, './src/configuration/theme.js')
     }
   },
   output: {
@@ -37,7 +36,7 @@ module.exports = {
         test: /\.(ico|png|jpg|gif|svg)$/i,
         loader: 'file-loader',
         options: {
-          //We will put everything flat, in images but during a production
+          //We will put everything flat in the images folder, but during a production
           //build we will use hash names for versioning
           outputPath: 'images',
           name(file) {
@@ -60,8 +59,8 @@ module.exports = {
   plugins: [
     //Grab our html template and icon to piece together
     new HtmlWebpackPlugin({
-      template: './config/templates/index.html',
-      favicon: './src/assets/favicon.ico'
+      template: './src/configuration/index.html',
+      favicon: './src/configuration/favicon.ico'
     }),
     //This isn't always necessary, but no harm in having a manifest file
     //when it comes to code splitting / chunking

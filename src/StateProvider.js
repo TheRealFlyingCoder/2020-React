@@ -1,25 +1,25 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from 'react';
 
 //Simple reducer allowing you to alter any of the top level
 //objects in the state
 const reducer = (state, action) => {
-  return {
-    ...state,
-    [action.key]: action.data
-  };
+	return {
+		...state,
+		[action.key]: action.data,
+	};
 };
 
 const initialState = {
-  Data: {},
+	Data: {},
 };
 export const stateKeys = {
-  Data: 'data',
-}
+	Data: 'data',
+};
 
 export const StateProvider = ({ children }) => (
-  <StateContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </StateContext.Provider>
+	<StateContext.Provider value={useReducer(reducer, initialState)}>
+		{children}
+	</StateContext.Provider>
 );
 
 export const useStateValue = () => useContext(StateContext);
