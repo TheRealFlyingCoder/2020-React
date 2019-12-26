@@ -1,8 +1,7 @@
-import { css } from "@emotion/core";
+import { css } from '@emotion/core';
 
 export default css`
-  body {
-    margin: 0;
-    padding: 0;
-  }
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 `;
