@@ -14,7 +14,7 @@ export default function App() {
 			<Router>
 				<Switch>
 					{routes.map(route => {
-						const { Component, metaConfig, exact, path, layoutType } = route;
+						const { Component, metaConfig, exact = true, path, layoutType } = route;
 						return (
 							<Route
 								key={path}

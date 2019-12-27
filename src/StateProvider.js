@@ -10,7 +10,7 @@ const reducer = (state, action) => {
 };
 
 const initialState = {
-	Data: {},
+	data: {},
 };
 export const stateKeys = {
 	Data: 'data',

@@ -65,5 +65,13 @@ module.exports = {
     //This isn't always necessary, but no harm in having a manifest file
     //when it comes to code splitting / chunking
     new ManifestPlugin(),
-  ]
+  ],
+  devServer: {
+    port: 8080,
+    //Turn this off and try refreshing the page on a route other than '/'
+    //It will fail, because webpack dev server doesn't know this is an SPA
+    //Really great blog on the topic:
+    //https://jaketrent.com/post/pushstate-webpack-dev-server/
+    historyApiFallback: true
+  }
 }

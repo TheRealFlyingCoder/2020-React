@@ -11,7 +11,9 @@ export default css`
 	display: flex;
 	justify-content: space-between;
 	z-index: ${Theme.layer.header};
+
 	${Theme.helpers.containerText('Header', false)}
+	
 	.logo {
 		display: flex;
 		align-items: center;
