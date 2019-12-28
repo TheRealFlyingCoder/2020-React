@@ -24,7 +24,11 @@ export default ({ metaConfig }) => {
 			<meta name="og:url" content={window.location.href} />
 			<meta name="og:image" content={metaConfig.image} />
 			<meta name="og:description" content={metaConfig.description} />
-			{metaConfig.custom}
+			{metaConfig.custom && metaConfig.custom.map(meta => {
+				return meta.tag 
+					? React.createElement(meta.tag, meta.props, meta.content)
+					: meta;
+			})}
 		</Helmet>
 	);
 };
