@@ -12,7 +12,16 @@
     "yarn": ">=1.22.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --env development"
+    "build": "webpack --env production",
+    "check-types": "tsc",
+    "lint": "yarn run lint:scripts && yarn run lint:styles",
+    "lint:styles": "stylelint src/**/*.styles.ts --config .stylelintrc.js --fix",
+    "lint:scripts": "eslint src/**/*.ts[x] --fix",
+    "scaffold": "ts-node ./tools/scaffold-component.ts",
+    "serve": "yarn build && node ./server.js",
+    "start": "webpack-dev-server --env development",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
