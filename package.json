@@ -5,6 +5,10 @@
 	"author": "Thomas Rowe",
 	"license": "MIT Licence",
 	"main": "index.tsx",
+	"repository": {
+	  "type" : "git",
+	  "url" : "https://github.com/TheRealFlyingCoder/2020-React.git"
+	},
 	"keywords": [
 		"React",
 		"Framework",

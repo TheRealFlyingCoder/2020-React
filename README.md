@@ -1,6 +1,10 @@
-# TheFlyingCoder's 2020 React Framework
+> 🚨 This accelerator is constantly improving, feel free to submit bugs and ideas! 🚨
 
-Ever wanted to break away from create-react-app and use a react boilerplate made by a lone gunslinging code monkey 🔫🐒? Then this is the framework for you. 
+# TheFlyingCoder's 2020 React Accelerator
+
+If you are building enterprise applications like me, you need full architectural freedom and code transparency to design the custom solutions your client's deserve.
+
+This framework is delivers the common tooling and code structures I found myself wanting day to day, so that you have a strong foundation when starting your next project.
 
 Try it out using my npx installer:
 
@@ -10,13 +14,18 @@ Try it out using my npx installer:
 
 **The Tools**
 
-Most boilerplates won't push an opinion on code structure, but I would prefer it if you code like a professional, and have standards, so here we are.  
+wiht 2020 comes a whole wealth of tooling options for React, the ones i
 
 ✔️ Typescript - Because I can't trust you to code alone  
 ✔️ Emotion.js - Imagine if CSS got better? Now here we are.  
 ✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs  
 ✔️ Storybook - This will change your life, take the time to learn all it's possibilities  
-✔️ React Hooks - If you ever use redux or MobX for state management again I will hunt you down  
+✔️ React Hooks - If you ever use redux or MobX for state management again I will hunt you down 
+✔️ Code Scaffolding - Why do the same thing more than once? Make it a node command  
+
+**The UI**
+
+There is none. Because building a great UI usually happens with your client by your side, (There are exceptions of course)
 
 ## What to know?
 When you first try out this framework have a good look around the tools, there is a lot of potential hidden under the hood ready to be switched on.
@@ -51,8 +60,4 @@ To have the best experience with this framework and the tools in general, you ne
 - Prettier: Same as above
 - Stylelint: And again
 - Vscode-icons: One of the best icon themes
-- Vscode-styled-components: Helps syntax highlting with CSS in JS 
-
-
-
-	
+- Vscode-styled-components: Helps syntax highlting with CSS in JS
