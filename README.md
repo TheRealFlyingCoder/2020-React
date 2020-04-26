@@ -14,9 +14,9 @@ Most boilerplates won't push an opinion on code structure, but I would prefer it
 
 ✔️ Typescript - Because I can't trust you to code alone  
 ✔️ Emotion.js - Imagine if CSS got better? Now here we are.  
-✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs
-✔️ Storybook - This will change your life, take the time to learn all it's possibilities
-✔️ React Hooks - If you ever use redux or MobX for state management again I will hunt you down
+✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs  
+✔️ Storybook - This will change your life, take the time to learn all it's possibilities  
+✔️ React Hooks - If you ever use redux or MobX for state management again I will hunt you down  
 
 ## What to know?
 When you first try out this framework have a good look around the tools, there is a lot of potential hidden under the hood ready to be switched on.
