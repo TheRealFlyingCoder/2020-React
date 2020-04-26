@@ -1,2 +1,13 @@
-lib
+# Dependency directories
+node_modules/
+
+# Output directory for project builds
 dist
+# Public directory
+public
+
+#Storybook configuration folder
+.storybook
+
+#Scripts folder
+scripts
