@@ -14,8 +14,8 @@ Try it out using my npx installer:
 
 **The Tools**
 
-wiht 2020 comes a whole wealth of tooling options for React, the ones i
-
+It's 2020 and there are a whole wealth of tooling options for React, but these are the staples for every project I work on.  
+  
 ✔️ Typescript - Because I can't trust you to code alone  
 ✔️ Emotion.js - Imagine if CSS got better? Now here we are.  
 ✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs  
