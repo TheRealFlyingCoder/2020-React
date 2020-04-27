@@ -20,7 +20,7 @@ wiht 2020 comes a whole wealth of tooling options for React, the ones i
 ✔️ Emotion.js - Imagine if CSS got better? Now here we are.  
 ✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs  
 ✔️ Storybook - This will change your life, take the time to learn all it's possibilities  
-✔️ React Hooks - If you ever use redux or MobX for state management again I will hunt you down 
+✔️ React Hooks - Hello functional components and simple state management
 ✔️ Code Scaffolding - Why do the same thing more than once? Make it a node command  
 
 **The UI**
