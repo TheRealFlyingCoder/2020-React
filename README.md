@@ -4,7 +4,7 @@
 
 If you are building enterprise applications like me, you need full architectural freedom and code transparency to design the custom solutions your client's deserve.
 
-This framework is delivers the common tooling and code structures I found myself wanting day to day, so that you have a strong foundation when starting your next project.
+This framework delivers the common tooling and code structures I found myself wanting day to day, so that you have a strong foundation when starting your next project.
 
 Try it out using my npx installer:
 
@@ -20,7 +20,7 @@ It's 2020 and there are a whole wealth of tooling options for React, but these a
 ✔️ Emotion.js - Imagine if CSS got better? Now here we are.  
 ✔️ Prettier/Eslint/Stylelint - Don't you dare touch these configs  
 ✔️ Storybook - This will change your life, take the time to learn all it's possibilities  
-✔️ React Hooks - Hello functional components and simple state management
+✔️ React Hooks - Hello functional components and simple state management  
 ✔️ Code Scaffolding - Why do the same thing more than once? Make it a node command  
 
 **The UI**
