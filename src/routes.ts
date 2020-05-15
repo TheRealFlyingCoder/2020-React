@@ -1,5 +1,5 @@
 import { AppRoute } from 'typings/AppRoute';
-import Home from './routes/Home';
+import Home from './routes/Home/Home';
 
 const routes: ObjectMap<AppRoute> = {
 	Home: {

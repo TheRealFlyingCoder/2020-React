@@ -14,7 +14,7 @@ module.exports = {
     //Place the closing > on a new line
     jsxBracketSameLine: false,
     //Line length before wrapping
-    printWidth: 100,
+    printWidth: 120,
     //Avoid parenthesis around a sole arrow function parem
     arrowParens: "avoid",
 };

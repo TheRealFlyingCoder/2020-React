@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 //import { useStateValue } from 'StateProvider';
 import styles from './ExampleComponent.styles';
 
-const ExampleComponent = (): React.ReactElement => {
+interface ExampleComponentProps {
+    title?: string
+}
+
+const ExampleComponent: React.FC<ExampleComponentProps> = ({ title = 'This is a fresh boi' }) => {
 
     //const [globaleState, setGlobalState] = useStateValue();
-    //const [localState, setLocalState] = useState(null);
+    const [showTitle, ] = useState<boolean>(true);
     
     return (
         <div css={styles}>
-            <p className="freshBoi">This is a fresh boi</p>
+            {showTitle && (
+                <p className="freshBoi">{title}</p>
+            )}
         </div>
     );    
 };

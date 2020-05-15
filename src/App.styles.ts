@@ -1,8 +1,7 @@
 import { css } from '@emotion/core';
+import ModernNormalise from 'utils/ModernNormalize';
 
 export default css`
-	body {
-		margin: 0;
-		padding: 0;
-	}
+	${ModernNormalise}
+	/* Continue styling like normal */
 `;

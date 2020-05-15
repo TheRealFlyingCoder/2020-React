@@ -1,16 +1,22 @@
 export default (name: string): string => {
-    return `import React from 'react';
+    return `import React, { useState } from 'react';
 //import { useStateValue } from 'StateProvider';
 import styles from './${name}.styles';
 
-const ${name} = (): React.ReactElement => {
+interface ${name}Props {
+    title?: string
+}
+
+const ${name}: React.FC<${name}Props> = ({ title = 'This is a fresh boi' }) => {
 
     //const [globaleState, setGlobalState] = useStateValue();
-    //const [localState, setLocalState] = useState(null);
+    //const [showTitle,] = useState<boolean>(true);
     
     return (
         <div css={styles}>
-            <p className="freshBoi">This is a fresh boi</p>
+            {showTitle && (
+                <p className="freshBoi">{title}</p>
+            )}
         </div>
     );    
 };
