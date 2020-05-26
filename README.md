@@ -37,7 +37,7 @@ To activate the simple PWA settings, just go into webpack.config.ts and flip `co
 
 WARNING: This will turn on service workers, which means cacheing! keep your dev tools open and cache off otherwise you won't any changes.
 
-**Persistant State**  
+**Persistent State**  
 Ever needed your local state to stick around after a refresh? Now this is easier than ever.
 
 Just add the `persistenceId` key to your App.state.ts, and give it a unique string. This will create a local storage item which is updated every time you alter the global state.
