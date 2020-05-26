@@ -1,9 +1,9 @@
 const AppState: AppState = {
     //This is where your global state goes
     //It's just a JS object so weave it together however you like!
-    //e.g
-    //Initialised: false,
-    //User: null,
+    //
+    //persistenceId: '' <-- Adding this id will activate persistent state using LocalStorage
+    //                    Every update will be reflected in storage and on refresh :)
 };
 
 //Async App State 

@@ -1,2 +1,3 @@
 interface AppState {
+    persistenceId?: string,
 }
