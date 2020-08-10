@@ -9,7 +9,7 @@ interface ${name}Props {
 
 const ${name}: React.FC<${name}Props> = ({ title = 'This is a fresh boi' }) => {
 
-    //const [globaleState, setGlobalState] = useStateValue();
+    //const [globalState, setGlobalState] = useStateValue();
     const [showTitle,] = useState<boolean>(true);
     
     return (

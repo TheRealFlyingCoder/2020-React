@@ -1,7 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { AppRoute } from 'typings/AppRoute';
 
-const metadata: React.FC<MetaData> = ({routeProps, pageMeta, gtmId}) => {
+const metadata: React.FC<{ routeProps: AppRoute }> = ({ routeProps }) => {
+	const { title, meta } = routeProps;
 	//Meta Data Configurations
 	type metaProp = {
 		name?: string;
@@ -10,47 +12,47 @@ const metadata: React.FC<MetaData> = ({routeProps, pageMeta, gtmId}) => {
 	};
 
 	let MetaDataObj: Array<metaProp> = [
-		{name: 'title', content: routeProps.title},
-		{property: 'og:title', content: routeProps.title},
-		{name: 'twitter:title', content: routeProps.title},
+		{ name: 'title', content: title },
+		{ property: 'og:title', content: title },
+		{ name: 'twitter:title', content: title },
 	];
 
-	if (pageMeta) {
+	if (!!meta) {
 		MetaDataObj = [
 			...MetaDataObj,
-			{name: 'twitter:site', content: pageMeta.siteName},
-			{name: 'twitter:creator', content: pageMeta.twitterHandle},
-			{property: 'og:description', content: pageMeta.description},
-			{property: 'og:url', content: pageMeta.url},
-			{property: 'og:site_name', content: pageMeta.siteName},
-			{property: 'fb:app_id', content: pageMeta.fbId},
-			{name: 'twitter:description', content: pageMeta.description},
-			{name: 'description', content: pageMeta.description},
-			{name: 'keywords', content: pageMeta.keywords},
-			{property: 'og:locale', content: pageMeta.locale},
-			{property: 'og:type', content: pageMeta.type},
+			{ name: 'twitter:site', content: meta.siteName },
+			{ name: 'twitter:creator', content: meta.twitterHandle },
+			{ property: 'og:description', content: meta.description },
+			{ property: 'og:url', content: meta.url },
+			{ property: 'og:site_name', content: meta.siteName },
+			{ property: 'fb:app_id', content: meta.fbId },
+			{ name: 'twitter:description', content: meta.description },
+			{ name: 'description', content: meta.description },
+			{ name: 'keywords', content: meta.keywords },
+			{ property: 'og:locale', content: meta.locale },
+			{ property: 'og:type', content: meta.type },
 		];
 
-		if (pageMeta.image) {
+		if (meta.image) {
 			MetaDataObj = [
 				...MetaDataObj,
-				{property: 'og:image', content: pageMeta.image.url},
-				{property: 'og:image:width', content: pageMeta.image.width},
-				{property: 'og:image:height', content: pageMeta.image.height},
-				{name: 'twitter:image', content: pageMeta.image.url},
-				{name: 'twitter:card', content: pageMeta.image.url},
+				{ property: 'og:image', content: meta.image.url },
+				{ property: 'og:image:width', content: meta.image.width },
+				{ property: 'og:image:height', content: meta.image.height },
+				{ name: 'twitter:image', content: meta.image.url },
+				{ name: 'twitter:card', content: meta.image.url },
 			];
 		}
 	}
 
 	//Google Tag Manager configurations
-	const gtmScript = gtmId
+	const gtmScript = meta?.gtmId
 		? `<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','${gtmId}');</script>
+	})(window,document,'script','dataLayer','${meta.gtmId}');</script>
 	<!-- End Google Tag Manager -->`
 		: null;
 
@@ -64,14 +66,14 @@ const metadata: React.FC<MetaData> = ({routeProps, pageMeta, gtmId}) => {
 				{/* <link rel="alternate" href="/es" hrefLang="es" /> */}
 			</Helmet>
 
-			{gtmId && (
+			{meta?.gtmId && (
 				<noscript>
 					<iframe
 						title="Google Tag Manager"
-						src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+						src={`https://www.googletagmanager.com/ns.html?id=${meta.gtmId}`}
 						height="0"
 						width="0"
-						style={{display: 'none', visibility: 'hidden'}}
+						style={{ display: 'none', visibility: 'hidden' }}
 					></iframe>
 				</noscript>
 			)}

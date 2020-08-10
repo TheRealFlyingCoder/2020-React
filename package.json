@@ -6,8 +6,8 @@
 	"license": "MIT Licence",
 	"main": "index.tsx",
 	"repository": {
-	  "type" : "git",
-	  "url" : "https://github.com/TheRealFlyingCoder/2020-React.git"
+		"type": "git",
+		"url": "https://github.com/TheRealFlyingCoder/2020-React.git"
 	},
 	"keywords": [
 		"React",
@@ -24,14 +24,19 @@
 		"yarn": ">=1.22.0"
 	},
 	"scripts": {
-		"build": "webpack --env production",
+		"build": "yarn build:client && yarn build:server",
+		"build:client": "webpack --env production",
+		"build:server": "webpack --env server",
 		"check-types": "tsc",
 		"lint": "yarn run lint:scripts && yarn run lint:styles",
 		"lint:styles": "stylelint src/**/*.styles.ts --config .stylelintrc.js --fix",
 		"lint:scripts": "eslint src/**/*.ts[x] --fix",
-		"scaffold": "ts-node ./tools/scaffold-component.ts",
-		"serve": "yarn build && node ./server.js",
+		"scaffold": "yarn run scaffold:component",
+		"scaffold:component": "ts-node ./tools/scaffold-component.ts",
+		"scaffold:route": "ts-node ./tools/scaffold-route.ts",
+		"serve": "yarn build && yarn start:server",
 		"start": "webpack-dev-server --env development",
+		"start:server": "node ./dist/server.js",
 		"storybook": "start-storybook -p 6006",
 		"test": "jest"
 	},
@@ -56,6 +61,7 @@
 		"@types/webpack": "^4.41.7",
 		"@types/webpack-dev-server": "^3.10.1",
 		"@types/webpack-manifest-plugin": "^2.1.0",
+		"@types/webpack-node-externals": "^2.5.0",
 		"@types/workbox-webpack-plugin": "^5.0.0",
 		"@typescript-eslint/eslint-plugin": "^2.1.0",
 		"@typescript-eslint/parser": "^2.1.0",
@@ -89,6 +95,7 @@
 		"webpack-cli": "^3.3.7",
 		"webpack-dev-server": "^3.8.0",
 		"webpack-manifest-plugin": "^2.2.0",
+		"webpack-node-externals": "^2.5.1",
 		"webpack-pwa-manifest": "^4.2.0",
 		"workbox-webpack-plugin": "^5.0.0"
 	},

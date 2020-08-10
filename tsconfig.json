@@ -20,10 +20,11 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "paths": {
-      "utils": ["utils"],
+      "assets": ["assets"],
       "components": ["components"],
       "layouts": ["layouts"],
-      "routes": ["routes.ts"],
+      "utils": ["utils"],
+      "Routes": ["routes.ts"],
       "StateProvider": ["utils/StateProvider.tsx"],
       "Theme": ["App.theme.ts"]
     }

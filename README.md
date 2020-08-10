@@ -1,6 +1,6 @@
 > 🚨 This accelerator is constantly improving, feel free to submit bugs and ideas! 🚨
 
-# TheFlyingCoder's 2020 React Accelerator
+# TheFlyingCoder's 2020 React Accelerator  
 
 If you are building enterprise applications like me, you need full architectural freedom and code transparency to design the custom solutions your client's deserve.
 
@@ -12,7 +12,7 @@ Try it out using my npx installer:
 
 [Check it out on npm](https://www.npmjs.com/package/2020-react)
 
-**The Tools**
+**The Tools**  
 
 It's 2020 and there are a whole wealth of tooling options for React, but these are the staples for every project I work on.  
   
@@ -23,11 +23,11 @@ It's 2020 and there are a whole wealth of tooling options for React, but these a
 ✔️ React Hooks - Hello functional components and simple state management  
 ✔️ Code Scaffolding - Why do the same thing more than once? Make it a node command  
 
-**The UI**
+**The UI**  
 
 There is none. Because building a great UI usually happens with your client by your side, (There are exceptions of course)
 
-## What to know?
+## What to know?  
 When you first try out this framework have a good look around the tools, there is a lot of potential hidden under the hood ready to be switched on.
 
 **Progressive web app**  
@@ -50,6 +50,16 @@ Does your app require data for it's first render? then use the AsyncStateProvide
 This lets you pass an Async function that can do API calls or validate routes/data etc before rendering the rest of your app. In the meantime you can pass App.loader.tsx to render a full page loader.
 
 React will have this functionality locked down soon with Suspense, but for the time being here we are.
+
+**Server Side Rendering**  
+Server side rendering doesn't have to be difficult!
+
+In this framework we register all our routes ahead of schedule (with the exception being dynamic routes), so in server.tsx we loop through our routes, pre-render the html
+and set it up to be served!
+
+Webpack is used at build time, to compile all the Typescript and application files correctly, to generate a server.js in your dist folder.
+
+You could also follow a similar pattern, and render all the html to static files for each route.
 
 **Custom scaffolding**  
 in `/tools` you'll find scaffolding code which you SHOULD customise.

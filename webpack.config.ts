@@ -6,6 +6,7 @@ import webpack from 'webpack';
 import WebpackPwaManifest from 'webpack-pwa-manifest';
 import ManifestPlugin from 'webpack-manifest-plugin';
 import WorkboxPlugin from 'workbox-webpack-plugin';
+import nodeExternals from 'webpack-node-externals';
 
 import pwaManifest from './public/manifest';
 import tsconfig from './tsconfig.json';
@@ -13,8 +14,9 @@ import tsconfig from './tsconfig.json';
 //Want a progressive app? start here
 const isPWA = false;
 
-const config = (env: 'production' | 'development'): webpack.Configuration => {
-	const production = env === 'production';
+const config = (env: 'production' | 'development' | 'server'): webpack.Configuration => {
+	const production = env !== 'development';
+	const client = env === 'production' || env === 'development';
 
 	//To save duplication across 3 files, we are using TSCONFIG.json to track our aliases
 	//as it's the only one we can't programatically fille
@@ -26,15 +28,18 @@ const config = (env: 'production' | 'development'): webpack.Configuration => {
 	);
 
 	return {
-		mode: env,
+		mode: production ? 'production' : 'development',
+		target: client ? 'web' : 'node',
 		//When using the dev server we build inline-source-maps
 		devtool: production ? false : 'inline-source-map',
-		// webpack will take the files from ./src/index
-		entry: './src/index',
+		// webpack will take the files from ./src/index on client builds and server.tsx on server builds
+		entry: client ? './src/index' : './server',
+		//For SSR we need to register the node externals
+		externals: client ? [] : [nodeExternals()],
 		// and output it into /dist as bundle.js
 		output: {
 			path: path.join(__dirname, '/dist'),
-			filename: '[name].[hash].js',
+			filename: client ? '[name].[hash].js' : 'server.js',
 			chunkFilename: '[name].[hash].js',
 			publicPath: '/'
 		},
@@ -75,7 +80,7 @@ const config = (env: 'production' | 'development'): webpack.Configuration => {
 				},
 			],
 		},
-		plugins: [
+		plugins: client ? [
 			new CleanWebpackPlugin(),
 			//Inject the public html template
 			new HtmlWebpackPlugin({
@@ -101,7 +106,7 @@ const config = (env: 'production' | 'development'): webpack.Configuration => {
 				}),
 			] : [],			
 			... production ? [] : [new ForkTsCheckerWebpackPlugin()]
-		],
+		] : [],
 		devServer: {
 			hot: true,
 			historyApiFallback: true,
