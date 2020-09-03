@@ -1,6 +1,5 @@
 dist/
 .vscode/
-.npminstaller/
 
 # Created by https://www.gitignore.io/api/node,intellij,sublimetext
 # Edit at https://www.gitignore.io/?templates=node,intellij,sublimetext
