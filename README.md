@@ -1,4 +1,4 @@
-> 🚨 This accelerator is old and nothing compared to (Remix)[https://remix.run/] now! 🚨
+> 🚨 This accelerator is old and nothing compared to [Remix](https://remix.run/) now! 🚨
 
 # TheFlyingCoder's 2020 React Accelerator  
 
